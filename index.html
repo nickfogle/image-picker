@@ -60,12 +60,11 @@
 	<div id="green">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 centered">
-				</div>
 
-				<div class="col-lg-7 centered">
-					<h3>WHAT WE CAN DO?</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<div class="col-lg-12 centered">
+					<h1 style="color:white;">Make A Selection!</h1>
+               <br/>
+               <br/>
 				</div>
 			</div>
 		</div>
@@ -73,77 +72,63 @@
 
 	<div class="container">
 		<div class="row centered mt grid">
-			<h3>Make a selection</h3>
          <div class="picker">
-      <select class="image-picker show-html">
-        <option data-img-src="img/01.png" value="1">  Page 1  </option>
-        <option data-img-src="img/02.png" value="2">  Page 2  </option>
-        <option data-img-src="img/03.png" value="3">  Page 3  </option>
-        <option data-img-src="img/04.png" value="4">  Page 4  </option>
-        <option data-img-src="img/05.png" value="5">  Page 5  </option>
-        <option data-img-src="img/06.png" value="6">  Page 6  </option>
-        <option data-img-src="img/07.png" value="7">  Page 7  </option>
-        <option data-img-src="img/08.png" value="8">  Page 8  </option>
-        <option data-img-src="img/09.png" value="9">  Page 9  </option>
-        <option data-img-src="img/10.png" value="10"> Page 10 </option>
-        <option data-img-src="img/11.png" value="11"> Page 11 </option>
-        <option data-img-src="img/12.png" value="12"> Page 12 </option>
-      </select>
+            <select class="image-picker show-html">
+              <option data-img-src="assets/img/01.png" value="1">  Page 1  </option>
+              <option data-img-src="assets/img/02.png" value="2">  Page 2  </option>
+              <option data-img-src="assets/img/03.png" value="3">  Page 3  </option>
+              <option data-img-src="assets/img/04.png" value="4">  Page 4  </option>
+              <option data-img-src="assets/img/05.png" value="5">  Page 5  </option>
+              <option data-img-src="assets/img/06.png" value="6">  Page 6  </option>
+              <option data-img-src="assets/img/07.png" value="7">  Page 7  </option>
+              <option data-img-src="assets/img/08.png" value="8">  Page 8  </option>
 
+            </select>
+<br/>
       <ul class="thumbnails image_picker_selector">
             <li>
                <div class="thumbnail">
-                  <img class="image_picker_image" src="img/01.png">
+                  <img class="image_picker_image" src="assets/img/01.png">
                </div>
             </li>
             <li>
                <div class="thumbnail">
-                  <img class="image_picker_image" src="img/02.png">
+                  <img class="image_picker_image" src="assets/img/02.png">
                </div>
             </li>
 
                <li><div class="thumbnail">
-                  <img class="image_picker_image" src="img/03.png">
+                  <img class="image_picker_image" src="assets/img/03.png">
                </div>
                </li>
                <li>
                   <div class="thumbnail">
-                     <img class="image_picker_image" src="img/04.png">
+                     <img class="image_picker_image"  src="assets/img/04.png">
                   </div>
                </li>
                <li>
                   <div class="thumbnail">
-                     <img class="image_picker_image" src="img/05.png">
+                     <img class="image_picker_image" src="assets/img/05.png">
                   </div>
                </li>
                <li>
                   <div class="thumbnail">
-                     <img class="image_picker_image" src="img/06.png">
+                     <img class="image_picker_image" src="assets/img/06.png">
                   </div>
                </li>
                <li>
                   <div class="thumbnail">
-                     <img class="image_picker_image" src="img/07.png">
+                     <img class="image_picker_image" src="assets/img/07.png">
                   </div>
                </li>
                <li>
                   <div class="thumbnail">
-                     <img class="image_picker_image" src="img/08.png">
+                     <img class="image_picker_image" src="assets/img/08.png">
                   </div>
                </li>
 
             </ul>
 
-		<div class="row mt centered">
-			<div class="col-lg-7 col-lg-offset-1 mt">
-					<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-			</div>
-
-			<div class="col-lg-3 mt">
-				<p><button type="button" class="btn btn-theme btn-lg">Email Me!</button></p>
-			</div>
-		</div>
-	</div>
 
 
 	<section id="contact"></section>
@@ -161,6 +146,30 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript">
+
+    jQuery("select.image-picker").imagepicker({
+      hide_select:  false,
+    });
+
+    jQuery("select.image-picker.show-labels").imagepicker({
+      hide_select:  false,
+      show_label:   true,
+    });
+
+    jQuery("select.image-picker.limit_callback").imagepicker({
+      limit_reached:  function(){alert('We are full!')},
+      hide_select:    false
+    });
+
+    var container = jQuery("select.image-picker.masonry").next("ul.thumbnails");
+    container.imagesLoaded(function(){
+      container.masonry({
+        itemSelector:   "li",
+      });
+    });
+
+  </script>
     <script src="assets/js/bootstrap.js"></script>
   </body>
 </html>
