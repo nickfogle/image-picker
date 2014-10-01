@@ -12,21 +12,17 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
+
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/image-picker.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/chart.js"></script>
     <script src="assets/js/image-picker.js"></script>
 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
   </head>
+
 
   <body>
 
@@ -65,7 +61,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 centered">
-					<img src="assets/img/iphone.png" alt="">
 				</div>
 
 				<div class="col-lg-7 centered">
@@ -78,31 +73,66 @@
 
 	<div class="container">
 		<div class="row centered mt grid">
-			<h3>OUR LATEST WORK</h3>
-			<div class="mt"></div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/01.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/02.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/03.jpg" alt=""></a>
-			</div>
-		</div>
+			<h3>Make a selection</h3>
+         <div class="picker">
+      <select class="image-picker show-html">
+        <option data-img-src="img/01.png" value="1">  Page 1  </option>
+        <option data-img-src="img/02.png" value="2">  Page 2  </option>
+        <option data-img-src="img/03.png" value="3">  Page 3  </option>
+        <option data-img-src="img/04.png" value="4">  Page 4  </option>
+        <option data-img-src="img/05.png" value="5">  Page 5  </option>
+        <option data-img-src="img/06.png" value="6">  Page 6  </option>
+        <option data-img-src="img/07.png" value="7">  Page 7  </option>
+        <option data-img-src="img/08.png" value="8">  Page 8  </option>
+        <option data-img-src="img/09.png" value="9">  Page 9  </option>
+        <option data-img-src="img/10.png" value="10"> Page 10 </option>
+        <option data-img-src="img/11.png" value="11"> Page 11 </option>
+        <option data-img-src="img/12.png" value="12"> Page 12 </option>
+      </select>
 
-		<div class="row centered mt grid">
-			<div class="mt"></div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/04.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/05.jpg" alt=""></a>
-			</div>
-			<div class="col-lg-4">
-				<a href="#"><img src="assets/img/06.jpg" alt=""></a>
-			</div>
-		</div>
+      <ul class="thumbnails image_picker_selector">
+            <li>
+               <div class="thumbnail">
+                  <img class="image_picker_image" src="img/01.png">
+               </div>
+            </li>
+            <li>
+               <div class="thumbnail">
+                  <img class="image_picker_image" src="img/02.png">
+               </div>
+            </li>
+
+               <li><div class="thumbnail">
+                  <img class="image_picker_image" src="img/03.png">
+               </div>
+               </li>
+               <li>
+                  <div class="thumbnail">
+                     <img class="image_picker_image" src="img/04.png">
+                  </div>
+               </li>
+               <li>
+                  <div class="thumbnail">
+                     <img class="image_picker_image" src="img/05.png">
+                  </div>
+               </li>
+               <li>
+                  <div class="thumbnail">
+                     <img class="image_picker_image" src="img/06.png">
+                  </div>
+               </li>
+               <li>
+                  <div class="thumbnail">
+                     <img class="image_picker_image" src="img/07.png">
+                  </div>
+               </li>
+               <li>
+                  <div class="thumbnail">
+                     <img class="image_picker_image" src="img/08.png">
+                  </div>
+               </li>
+
+            </ul>
 
 		<div class="row mt centered">
 			<div class="col-lg-7 col-lg-offset-1 mt">
